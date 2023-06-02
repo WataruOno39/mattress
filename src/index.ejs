@@ -198,7 +198,7 @@
       </div>
     </section>
 
-    <section id="section6" class="search-section">
+    <section id="search-section" class="search-section">
       <h2>
         体験者の属性別ランキングを検索する
       </h2>
@@ -208,6 +208,10 @@
         </span>
         気になる属性でマットレスを検索！
       </h3>
+
+      <a id="search-float" class="search-float">
+        <i class="fa fa-search"></i>
+      </a>
       
       <div class="search-options">
         <div class="option-box">
@@ -809,6 +813,7 @@
 <script>
   window.onload = function () {
     const checkButton = document.getElementsByClassName('search-button');
+    const floatButton = document.getElementById('search-float');
 
     for (i = 0; i < checkButton.length; i++) {
       checkButton[i].addEventListener('click', function () {
@@ -831,8 +836,20 @@
           behavior: 'smooth'
           }
         )
+        console.log(floatButton);
       });
     }
+
+    floatButton.addEventListener('click', function () {
+      const targetSearch = document.getElementById('search-section');
+      const targetSearchPosition = targetSearch.getBoundingClientRect();
+      const targetSearchTop = targetSearchPosition.top + window.pageYOffset;
+      window.scrollTo({
+          top: targetSearchTop,
+          behavior: 'smooth'
+        }
+      )
+    })
   };
 </script>
 
