@@ -337,15 +337,20 @@ h2 {
   background: #15096b;
   border-radius: 100px;
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
-  width: 56px;
-  height: 56px;
+  padding: 12px 16px;
   display: flex;
   align-items: center;
   justify-content: center;
+  display: flex;
+  align-items: center;
   i {
-    margin-right: 4px;
+    margin-right: 8px;
     color: #fff;
-    font-size: 20px;
+    font-size: 16px;
+  }
+  span {
+    display: block;
+    color: #fff;
   }
 }
 
