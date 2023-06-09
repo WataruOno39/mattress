@@ -75,6 +75,125 @@ h2 {
   width: calc(50% - 8px);
 }
 
+// ランキンググリッド
+
+.rankingGrid {
+  width: calc(100% + 16px);
+  overflow: scroll;
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    border: 1px solid #cbe3e8;
+    width: fit-content;
+    margin-right: 16px;
+  }
+  &__row {
+    border-right: 1px solid #cbe3e8;
+    margin-right: -1px;
+    &--1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 0 24px 24px 24px;
+    }
+  }
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 8px;
+    span {
+      display: flex;
+      align-items: end;
+      height: 38px;
+      margin-bottom: 8px;
+      img {
+        width: 48px;
+      }
+    }
+  }
+  &__image {
+    text-align: center;
+    width: 100px;
+    height: 67px;
+  }
+  &__infoTitle {
+    color: #15096b;
+    font-weight: bold;
+    background-color: #e6f4f7;
+    text-align: center;
+    font-size: 14px;
+  }
+  dl {
+    margin: 0;
+  }
+  dd {
+    margin: 0;
+  }
+  &__infoValue {
+    text-align: center;
+  }
+  &__point {
+    font-size: 14px;
+    margin: 16px 0;
+    span {
+      font-size: 18px;
+      color: #ff5c00;
+      font-weight: bold;
+    }
+  }
+  &__price {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 12px;
+    text-align: center;
+    padding: 16px 8px;
+  }
+  &__feature {
+    font-size: 12px;
+    i {
+      color: #15096b;
+      margin-right: 2px;
+    }
+  }
+  &__description {
+    font-size: 12px;
+    padding: 0 8px;
+    text-align: left;
+  }
+  &__link {
+    padding: 16px 8px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+  }
+  &__button {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    background: #feb104;
+    color: #15096b;
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    &--outline {
+      background-color: #fff;
+      border: 1px solid #feb104;
+      &:hover {
+        background: #feb104;
+      }
+    }
+  }
+  &__confirmButton {
+    margin-top: 24px;
+  }
+}
+
 /* 専門家 */
 .expert-list {
   margin: 0;
