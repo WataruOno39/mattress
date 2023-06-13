@@ -17,15 +17,20 @@
 
 .item-rank {
   margin: 0;
-  &.no1::before {
-    content: "\f521";
-    font-family: "FontAwesome";
-    font-weight: 300;
-    display: inline-block;
-    line-height: 1;
-    font-size: 16px;
-    color: #feb104;
-    margin-right: 4px;
+  &.no1 {
+    font-size: 18px;
+    color: #ff5c00;
+    font-weight: bold;
+    &::before {
+      content: "\f521";
+      font-family: "FontAwesome";
+      font-weight: 300;
+      display: inline-block;
+      line-height: 1;
+      font-size: 18px;
+      color: #feb104;
+      margin-right: 4px;
+    }
   }
   &.no2::before {
     content: "\f521";
@@ -78,7 +83,7 @@
   p {
     margin: 0;
     font-size: 20px;
-    color: red;
+    color: #ff5c00;
     font-weight: bold;
     span {
       text-decoration: line-through;
